@@ -1,9 +1,11 @@
-import "./App.css";
+import { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import landscape from "./landscape.jpg";
 import cave from "./cave.jpg";
 
 function App() {
+  const ref = useRef();
+
   return (
     <div>
       <Parallax pages={4} ref={ref}>
@@ -26,6 +28,14 @@ function App() {
             backgroundSize: "cover",
           }}
         />
+
+        {/* <ParallaxLayer
+          sticky={{ start: 0.9, end: 2.5 }}
+          style={{ textAlign: "center" }}
+        >
+          <img src={} />
+        </ParallaxLayer> */}
+
         <ParallaxLayer
           offset={0.2}
           speed={0.05}
