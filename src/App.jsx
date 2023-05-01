@@ -1,5 +1,7 @@
 import "./App.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import landscape from "./landscape.jpg";
+import cave from "./cave.jpg";
 
 function App() {
   return (
@@ -24,6 +26,21 @@ function App() {
             backgroundSize: "cover",
           }}
         />
+        <ParallaxLayer
+          offset={0.2}
+          speed={0.05}
+          onClick={() => ref.current.scrollTo(3)}
+        >
+          <h2>Ready to dig down?</h2>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={2}
+          onClick={() => ref.current.scrollTo(0)}
+        >
+          <h2>Nothing much to see here...</h2>
+        </ParallaxLayer>
       </Parallax>
     </div>
   );
